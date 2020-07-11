@@ -6,6 +6,6 @@ resource "aws_route53_record" "redirect" {
   alias {
     name                   = aws_s3_bucket.main.website_domain
     zone_id                = aws_s3_bucket.main.hosted_zone_id
-    evaluate_target_health = false
+    evaluate_target_health = true
   }
 }
